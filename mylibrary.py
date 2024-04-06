@@ -102,7 +102,7 @@ def CN_diffusion(x_min, x_max, t_max, dx, dt, Diff, init_cond, source_term, boun
     - t: Time grid
     """
 
-    alpha = Diff * dt / (dx**2)
+    alpha = Diff*dt/(dx**2)
 
     # Spatial grid
     x = np.linspace(x_min, x_max, int((x_max - x_min) / dx) + 1)
@@ -127,7 +127,7 @@ def CN_diffusion(x_min, x_max, t_max, dx, dt, Diff, init_cond, source_term, boun
 
     return Temp, np.array(x), np.array(t)
 
-def get_B_and_pitch(Br, Bphi):
+def BP_calc(Br, Bphi):
 
     """
     Calculation of the pitch angle
